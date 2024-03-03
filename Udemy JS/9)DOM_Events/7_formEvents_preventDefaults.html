@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events and Prevent Defaults</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        width: 500px;
+        text-align: center;
+        margin: auto;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Form Events and Prevent Defaults</h2>
+    </div>
+
+    <!-- the Action attribute of the form tag describes where the form inout goes when you click submit -->
+    <form action="/shelter"> <!-- when form is filled data is sent to /shelter -->
+      <input type="text" id="catName" />
+      <button>Submit</button>
+    </form>
+    <h2>Available Cats</h2>
+    <ul id="cats"></ul>
+
+    <p>
+      Sometimes we don't want certain inputs by default for example a company
+      does not deliver to a certain address so that company just DOES NOT TAKE
+      AN INPUT and displays "Sorry we don't deliver to this address/this
+      pincode." To do this we use <b>event.preventDefault</b>
+    </p>
+
+    <script src="7_formEvents_preventDefaults.js"></script>
+  </body>
+</html>
